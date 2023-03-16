@@ -1,0 +1,39 @@
+@mixin active() {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 8px;
+        transform: translateY(-50%);
+        display: inline-block;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+}
+
+@mixin styleLink() {
+    padding: 4px 21px;
+    color: $text-color;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+@mixin btn($height: 60px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 205px;
+    height: $height;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: 9999px;
+}

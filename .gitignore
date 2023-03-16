@@ -1,0 +1,7 @@
+# Remove all cached of git
+# git rm -r --cached .
+
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map

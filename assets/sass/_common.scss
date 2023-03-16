@@ -1,0 +1,37 @@
+@import './variable';
+@import './mixin';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --wide: 1170px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    font-size: 1.6rem;
+    font-family: 'Sora', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    @include btn();
+
+    &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+        transition: opacity 0.2s linear;
+    }
+}
