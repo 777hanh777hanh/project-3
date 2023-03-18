@@ -37,3 +37,12 @@
     border: 1px solid $primary-color;
     border-radius: 9999px;
 }
+
+@mixin section($textAlign: justify) {
+    font-weight: 600;
+    font-size: 5rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: $header-bg;
+    text-align: $textAlign;
+}

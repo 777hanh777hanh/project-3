@@ -1,3 +1,7 @@
+/*
+    sass ./assets/sass/style.scss ./assets/css/style.css -w
+*/
+
 @import './variable';
 @import './mixin';
 
@@ -17,7 +21,8 @@ html {
 
 body {
     display: flex;
-    width: 100vw;
+    flex-direction: column;
+    width: 100%;
     font-size: 1.6rem;
     font-family: 'Sora', sans-serif;
 }
@@ -34,4 +39,53 @@ a {
         cursor: pointer;
         transition: opacity 0.2s linear;
     }
+}
+
+.section-heading {
+    @include section();
+}
+
+.section-desc {
+    margin-top: 18px;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: $text-desc;
+}
+
+.control {
+    display: flex;
+    gap: 18px;
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        color: #575f66;
+        background: #fff;
+        border: 1px solid #575f66;
+        border-radius: 50%;
+        outline: none;
+        transition: all 0.1s ease-in-out;
+
+        &--right {
+            transform: rotateY(180deg);
+        }
+
+        &:hover {
+            cursor: pointer;
+            background: $primary-color;
+            border-color: $primary-color;
+            color: #fff;
+        }
+    }
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
 }
